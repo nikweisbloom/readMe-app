@@ -27,16 +27,6 @@ const questions = [
         name: 'license',
         message: 'What license does your project use?'
     },
-    {
-        type: 'input',
-        name: 'contributing',
-        message: 'How can others contribute to this project?'
-    },
-    {
-        type: 'input',
-        name: 'tests',
-        message: 'How do you run tests for this project?'
-    }
 ];
 
 function generateREADME(answers) {
@@ -54,12 +44,6 @@ ${answers.usage}
 
 ## License
 This project is licensed under the ${answers.license} License.
-
-## Contributing
-${answers.contributing}
-
-## Tests
-${answers.tests}
     `;
 }
 
@@ -73,13 +57,10 @@ function writeToFile(fileName, data) {
     });
 }
 
-function init() {
-    inquirer
-        .prompt(questions)
-        .then((answers) => {
-            const readmeContent = generateREADME(answers);
-            writeToFile('README.md', readmeContent);
-        });
+async function init() {
+    const answers = await inquirer.prompt(questions);
+    const readmeContent = generateREADME(answers);
+    writeToFile('README.md', readmeContent);
 }
 
 init();
