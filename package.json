@@ -1,0 +1,23 @@
+{
+  "name": "readme-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikweisbloom/readMe-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nikweisbloom/readMe-app/issues"
+  },
+  "homepage": "https://github.com/nikweisbloom/readMe-app#readme",
+  "description": "",
+  "dependencies": {
+    "inquirer": "^12.4.1"
+  }
+}
